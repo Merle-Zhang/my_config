@@ -8,6 +8,7 @@ system_info:
     gecos: "Merle Zhang"
     lock_passwd: true
     ssh_import_id:
+      # TODO: https://launchpad.net/
       # - lp:merlezhang
       - gh:Merle-Zhang
     sudo: ALL=(ALL) NOPASSWD:ALL
