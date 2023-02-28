@@ -1,0 +1,24 @@
+#cloud-config
+
+ssh_pwauth: false
+
+system_info:
+  default_user:
+    name: merle
+    gecos: "Merle Zhang"
+    lock_passwd: true
+    ssh_import_id:
+      # - lp:merlezhang
+      - gh:Merle-Zhang
+    sudo: ALL=(ALL) NOPASSWD:ALL
+
+packages:
+  - build-essential
+  - tmux
+  - git
+
+
+runcmd:
+    - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+    - nvm install node
+    # TODO: https://github.com/coder/code-server
