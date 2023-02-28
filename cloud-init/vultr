@@ -21,4 +21,5 @@ packages:
 runcmd:
     - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
     - nvm install node
+    # TODO: https://docs.anaconda.com/anaconda/install/silent-mode/
     # TODO: https://github.com/coder/code-server
