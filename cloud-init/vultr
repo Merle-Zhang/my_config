@@ -21,6 +21,9 @@ packages:
 
 runcmd:
     - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+    - export NVM_DIR="$HOME/.nvm"
+    - [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     - nvm install node
+    - printf '\nexport NVM_DIR="$HOME/.nvm"\n[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  \# This loads nvm\n[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  \# This loads nvm bash_completion\n' >> ~/.bashrc
     # TODO: https://docs.anaconda.com/anaconda/install/silent-mode/
     # TODO: https://github.com/coder/code-server
